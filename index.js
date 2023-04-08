@@ -1,6 +1,6 @@
 // importing libraries 
 const { Telegraf } = require('telegraf');
-const bot = new Telegraf(TOKEN);
+const bot = new Telegraf('6157165674:AAGJc4rGlPKfqWAn1gARO6Zkv-tHBlEX1VU');
 const axios = require('axios');
 
 
@@ -15,7 +15,17 @@ bot.start( (ctx)=>{
 
 bot.help( (ctx) =>{
 
-    ctx.reply("i help and give directions to people in life ");
+    let s = "";
+    
+    s = "here are list of commands you can use" + "\n" + "\n";
+    
+    s = "\quote - for random motivational quotes" + "\n";
+    s = "\shlok - for random gita shlokes in sanskrit , hindi and english" + "\n";
+    s = "\contests - for recent upcoming contests under 7 days" + "\n";
+    s = "\joke - for random programming jokes" + "\n";
+    s = "\advice- for random life adivices" + "\n";
+    
+    ctx.reply(s);
 
 });
 
