@@ -1,7 +1,8 @@
 // importing libraries 
 const {TelegramBot} = require('micro-bot');
+
 const bot = new TelegramBot({
-    token : 'TOKEN'
+    token : 'TOKEN',
 });
 
 // const TOKEN = process.env.TOKEN
