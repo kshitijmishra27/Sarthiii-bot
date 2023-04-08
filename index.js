@@ -19,11 +19,11 @@ bot.command( 'help' , (ctx) =>{
     
     s = "here are list of commands you can use" + "\n" + "\n";
     
-    s = "\quote - for random motivational quotes" + "\n";
-    s = "\shlok - for random gita shlokes in sanskrit , hindi and english" + "\n";
-    s = "\contests - for recent upcoming contests under 7 days" + "\n";
-    s = "\joke - for random programming jokes" + "\n";
-    s = "\advice- for random life adivices" + "\n";
+    s += "\quote - for random motivational quotes" + "\n";
+    s += "\shlok - for random gita shlokes in sanskrit , hindi and english" + "\n";
+    s += "\contests - for recent upcoming contests under 7 days" + "\n";
+    s += "\joke - for random programming jokes" + "\n";
+    s += "\advice- for random life adivices" + "\n";
     
     ctx.reply(s);
 
