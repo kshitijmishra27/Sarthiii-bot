@@ -1,8 +1,10 @@
 // importing libraries 
-const {Composer} = require('micro-bot');
-const bot = new Composer;
+const {TelegramBot} = require('micro-bot');
+const bot = new TelegramBot({
+    token : 'TOKEN'
+});
 
-// const TOKEN = process.env.TOKEN;
+// const TOKEN = process.env.TOKEN
 const axios = require('axios');
 
 
