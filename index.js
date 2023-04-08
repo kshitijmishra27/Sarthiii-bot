@@ -1,12 +1,12 @@
 // importing libraries 
+const {Composer} = require('micro-bot');
+const bot = new Composer;
 
-const { Telegraf } = require('telegraf');
-const bot = new Telegraf();
-require('dotenv');
+// const TOKEN = process.env.TOKEN;
 const axios = require('axios');
 
-// start command
 
+// start command
 bot.start( (ctx)=>{
 
     ctx.reply("your Sarthi is ready to share the knowledge ");
@@ -152,4 +152,4 @@ bot.command('contests', (ctx)=>{
 });
 
     // launching our bot
-bot.launch();
+module.exports = bot;
