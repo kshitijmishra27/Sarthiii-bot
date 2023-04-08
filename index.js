@@ -1,9 +1,7 @@
 // importing libraries 
-const {TelegramBot} = require('micro-bot');
+const { Telegraf } = require('telegraf');
 
-const bot = new TelegramBot({
-    token : 'TOKEN',
-});
+const bot = new Telegraf(TOKEN);
 
 // const TOKEN = process.env.TOKEN
 const axios = require('axios');
