@@ -1,9 +1,6 @@
 // importing libraries 
 const { Telegraf } = require('telegraf');
-
-// const TOKEN = process.env.TOKEN
-const bot = new Telegraf(TOKEN);
-
+const bot = new Telegraf('6157165674:AAGJc4rGlPKfqWAn1gARO6Zkv-tHBlEX1VU');
 const axios = require('axios');
 
 
@@ -153,5 +150,5 @@ bot.command('contests', (ctx)=>{
 });
 
     // launching our bot
-module.exports = bot;
-// bot.launch();
+// module.exports = bot;
+bot.launch();
