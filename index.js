@@ -13,7 +13,7 @@ bot.start( (ctx)=>{
 
 // help command
 
-bot.help( (ctx) =>{
+bot.command( 'help' , (ctx) =>{
 
     let s = "";
     
