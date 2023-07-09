@@ -1,8 +1,8 @@
 // importing libraries 
 const { Telegraf } = require('telegraf');
 const bot = new Telegraf('6157165674:AAGJc4rGlPKfqWAn1gARO6Zkv-tHBlEX1VU');
+const quotes = require('./niti.json');
 const axios = require('axios');
-
 
 // start command
 bot.start( (ctx)=>{
@@ -15,7 +15,17 @@ bot.start( (ctx)=>{
 
 bot.help( (ctx) =>{
 
-    ctx.reply("i help and give directions to people in life ");
+    let s = "";
+    
+    s = "here are list of commands you can use" + "\n" + "\n";
+    
+    s += "\quote - for random motivational quotes" + "\n" + "\n";
+    s += "\shlok - for random gita shlokes in sanskrit , hindi and english"   + "\n" + "\n";
+    s += "\contests - for recent upcoming contests under 7 days"   + "\n" + "\n";
+    s += "\joke - for random programming jokes"   + "\n" + "\n";
+    s += "\chanakya_niti - where you will random chanakya niti quotes from real book"   + "\n" + "\n";
+    
+    ctx.reply(s);
 
 });
 
@@ -29,6 +39,19 @@ bot.hears('hello', (ctx) =>{
 function randomInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+let quotesLength = quotes.length;
+let randomQuoteIndex;
+randomQuoteIndex = (Math.random() * quotesLength) | 0;
+
+// chanakya niti
+
+bot.command('chanakya_niti', (ctx)=>{
+
+const text = quotes[randomQuoteIndex].quote;
+ctx.reply(text);
+
+});
 
 // quotes command
 
@@ -93,29 +116,6 @@ bot.command('joke', (ctx)=>{
 
 });
 
-// roast
-
-bot.command('roast', (ctx)=>{
-    
-    let url = "https://evilinsult.com/generate_insult.php?lang=en&type=json";
-
-    axios.get(url).then( (res) =>{
-        ctx.reply(res.data.insult);
-    });
-
-});
-
-// advice
-
-bot.command('advice', (ctx)=>{
-    
-    let url = "https://api.adviceslip.com/advice";
-
-    axios.get(url).then( (res) =>{
-        ctx.reply(res.data.slip.advice);
-    });
-
-});
 
 // code for contests
 
@@ -149,6 +149,7 @@ bot.command('contests', (ctx)=>{
 
 });
 
-    // launching our bot
-// module.exports = bot;
+
+
+// launching our bot
 bot.launch();
