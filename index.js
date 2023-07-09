@@ -1,11 +1,7 @@
 // importing libraries 
 const { Telegraf } = require('telegraf');
-<<<<<<< HEAD
 const bot = new Telegraf('6157165674:AAGJc4rGlPKfqWAn1gARO6Zkv-tHBlEX1VU');
 const quotes = require('./niti.json');
-=======
-const bot = new Telegraf(TOKEN);
->>>>>>> e785109aa4e5cfb7effde69dfac9f330357abc17
 const axios = require('axios');
 
 // start command
@@ -23,19 +19,11 @@ bot.command( 'help' , (ctx) =>{
     
     s = "here are list of commands you can use" + "\n" + "\n";
     
-<<<<<<< HEAD
     s += "\quote - for random motivational quotes" + "\n" + "\n";
     s += "\shlok - for random gita shlokes in sanskrit , hindi and english"   + "\n" + "\n";
     s += "\contests - for recent upcoming contests under 7 days"   + "\n" + "\n";
     s += "\joke - for random programming jokes"   + "\n" + "\n";
     s += "\chanakya_niti - where you will random chanakya niti quotes from real book"   + "\n" + "\n";
-=======
-    s += "\quote - for random motivational quotes" + "\n";
-    s += "\shlok - for random gita shlokes in sanskrit , hindi and english" + "\n";
-    s += "\contests - for recent upcoming contests under 7 days" + "\n";
-    s += "\joke - for random programming jokes" + "\n";
-    s += "\advice- for random life adivices" + "\n";
->>>>>>> e785109aa4e5cfb7effde69dfac9f330357abc17
     
     ctx.reply(s);
 
@@ -161,13 +149,7 @@ bot.command('contests', (ctx)=>{
 
 });
 
-<<<<<<< HEAD
 
 
 // launching our bot
 bot.launch();
-=======
-    // launching our bot
-// module.exports = bot;
-bot.launch();
->>>>>>> e785109aa4e5cfb7effde69dfac9f330357abc17
