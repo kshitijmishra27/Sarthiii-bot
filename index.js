@@ -42,11 +42,13 @@ function randomInteger(min, max) {
 
 let quotesLength = quotes.length;
 let randomQuoteIndex;
-randomQuoteIndex = (Math.random() * quotesLength) | 0;
 
 // chanakya niti
 
 bot.command('chanakya_niti', (ctx)=>{
+
+   
+randomQuoteIndex = (Math.random() * quotesLength) | 0;    
 
 const text = quotes[randomQuoteIndex].quote;
 ctx.reply(text);
