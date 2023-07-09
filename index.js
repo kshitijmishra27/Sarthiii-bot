@@ -1,6 +1,5 @@
 // importing libraries 
 const { Telegraf } = require('telegraf');
-const bot = new Telegraf('6157165674:AAGJc4rGlPKfqWAn1gARO6Zkv-tHBlEX1VU');
 const quotes = require('./niti.json');
 const axios = require('axios');
 
