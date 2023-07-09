@@ -46,7 +46,6 @@ let randomQuoteIndex;
 
 bot.command('chanakya_niti', (ctx)=>{
 
-   
 randomQuoteIndex = (Math.random() * quotesLength) | 0;    
 
 const text = quotes[randomQuoteIndex].quote;
