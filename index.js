@@ -1,11 +1,11 @@
 // importing libraries 
-const { Telegraf } = require('telegraf');
+const { Telegraf } = require('6157165674:AAGJc4rGlPKfqWAn1gARO6Zkv-tHBlEX1VU');
 const bot = new Telegraf('TOKEN');
 const quotes = require('./niti.json');
 const axios = require('axios');
 
 // start command
-bot.start( (ctx)=>{
+bot.start( (ctx)=>
 
     ctx.reply("your Sarthi is ready to share the knowledge ");
 
@@ -41,13 +41,12 @@ function randomInteger(min, max) {
 }
 
 let quotesLength = quotes.length;
-let randomQuoteIndex;
 
 // chanakya niti
 
 bot.command('chanakya_niti', (ctx)=>{
-
-randomQuoteIndex = (Math.random() * quotesLength) | 0;    
+    
+let randomQuoteIndex = (Math.random() * quotesLength) | 0;    
 
 const text = quotes[randomQuoteIndex].quote;
 ctx.reply(text);
